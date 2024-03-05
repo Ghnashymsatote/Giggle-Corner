@@ -1,5 +1,5 @@
 const express=require("express");
-const app=express();
+const app=express();            
 const path=require("path");
 const mongoose = require('mongoose');
 const Sign=require("./model/sign");
@@ -7,7 +7,7 @@ const Post=require("./model/post.js");
 const methodOverride=require("method-override");
 app.set("views",path.join(__dirname,"views"));
 app.set("view path",path.join(__dirname,"views")); 
-app.set("view engine","ejs");
+app.set("view engine","ejs");   
 app.use(express.static(path.join(__dirname,"public"))); 
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
@@ -17,7 +17,7 @@ main().then((res)=>{
 }).catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/NEWJOKES');
+  await mongoose.connect('mongodb+srv://sonusatote1:P4RFSgwiXoahOk97@cluster0.6o9babx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
