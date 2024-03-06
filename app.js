@@ -21,7 +21,7 @@ async function main() {
 
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
-app.get("/signup",(req,res)=>{
+app.get("/",(req,res)=>{
    res.render("sign.ejs");
 })
 app.post("/signup/home",async(req,res)=>{
